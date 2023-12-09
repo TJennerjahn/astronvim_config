@@ -16,6 +16,8 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer"
     },
+    ["<leader>fd"] = { "<cmd>DashWord<cr>", desc = "Find word in Dash Doc" },
+    ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find Projects" },
     ["<leader>tt"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "Toggle terminal" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
@@ -32,6 +34,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>ri"] = {":MagmaInit<cr>"},
+    ["<leader>rr"] = {":MagmaReevaluateCell<cr>"},
+    ["<leader>rl"] = {":MagmaEvaluateLine<cr>"}
   },
   t = {
     ["<leader>tt"] = { "<C-\\><C-n><C-w>l", desc = "Hide terminal" },
@@ -41,5 +46,6 @@ return {
   v = {
     ["<"] = { "<gv", desc = "Shift left" },
     [">"] = { ">gv", desc = "Shift right" },
+    ["<leader>rr"] = {":<C-u>MagmaEvaluateVisual<CR>"}
   },
 }
