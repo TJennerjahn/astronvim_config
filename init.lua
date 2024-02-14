@@ -76,5 +76,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    require("notify").setup({
+      background_colour = "#FFFFFF",
+    })
   end,
 }

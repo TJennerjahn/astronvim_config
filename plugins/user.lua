@@ -16,11 +16,6 @@ return {
     end
   },
   {
-    'mrjones2014/dash.nvim',
-    lazy = false,
-    build = 'make install',
-  },
-  {
     "ahmedkhalf/project.nvim",
     lazy = false,
     config = function()
