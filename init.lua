@@ -78,6 +78,7 @@ return {
     -- }
     require("notify").setup({
       background_colour = "#FFFFFF",
+      render = "compact",
     })
   end,
 }
